@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+  --color-very-dark-blue: hsl(234, 12%, 34%);
+  --color-grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--very-light-gray);
+  font-size: 1.5rem;
+}
+
+main {
+  margin: 5rem auto;
+  width: 80%;
+  max-width: 114rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h2,
+h3 {
+  color: var(--color-very-dark-blue);
+}
+
+.title {
+  font-weight: 200;
+}
+
+h3 {
+  margin-bottom: 1.5rem;
+}
+
+.main-header {
+  margin: 0 auto;
+  text-align: center;
+  width: 60%;
+}
+
+.header-description {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  color: var(--color-grayish-blue);
+}
+
+.card {
+  border-radius: 5px;
+  padding: 2.6rem;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cards-container {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2.2rem;
+}
+
+.card:nth-child(1) {
+  border-top: 5px solid var(--color-cyan);
+  grid-row: 2 / span 2;
+}
+.card:nth-child(2) {
+  border-top: 5px solid var(--color-red);
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+.card:nth-child(3) {
+  border-top: 5px solid var(--color-orange);
+  grid-column: 2;
+  grid-row: 3 / span 2;
+}
+.card:nth-child(4) {
+  border-top: 5px solid var(--color-blue);
+  grid-column: 3;
+  grid-row: 2 / span 2;
+}
+
+.img-container {
+  text-align: right;
+}
+
+.card-image {
+  width: 5rem;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+.card-description {
+  font-size: 1.4rem;
+  color: var(--color-grayish-blue);
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 59em) {
+  .main-header {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 44em) {
+  main {
+    width: 90%;
+  }
+
+  .main-header {
+    width: 100%;
+  }
+
+  .cards-container {
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 34em) {
+  h2 {
+    font-size: 2.6rem;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
